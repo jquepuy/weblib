@@ -1,0 +1,305 @@
+/*****************************************************************************/
+/* ---------------------------- SCREEN MEDIA STYLE ------------------------- */
+/*****************************************************************************/
+
+@media screen, print {
+    /* global (entire document) */
+    html {
+        font-family: 'Myriad Pro', 'Helvetica', 'Verdana', sans-serif;
+        font-size: 12px;
+        color: #444444;
+    }
+
+    /* Title */
+    .title {
+        text-align: center;
+        padding: 30px 5px;
+        margin-bottom: .2em;
+        border: solid 1px #ccc;
+        background: #336699;
+        color: white;
+        font-size: 3em;
+    }
+
+
+    /* body */
+    body {
+        line-height: 175%;
+    }
+
+    div#content {
+        margin-left: 10%;
+        width: 80%;
+    }
+
+
+    /* Links */
+    a {
+        font-weight: semi-bold;
+        color: #ff0066;
+        text-decoration: none;
+    }
+
+    p a:hover,
+    li a:hover
+    {
+        background: #336699;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        padding: 3px 5px;
+    }
+
+
+
+
+
+    /* ------------------------------ TOC ---------------------------------- */
+
+    #table-of-contents {
+        line-height: 110%;
+    }
+
+    #table-of-contents a {
+        color: #b30000;
+        font-weight: semi-bold;
+        text-decoration: none;
+    }
+
+    #table-of-contents a:hover,
+    #postamble p a:hover
+    {
+        background: inherit;
+        padding: none;
+        border-radius: 0;
+        color: inherit;
+    }
+
+    #text-table-of-contents ul {
+        list-style: none;
+    }
+    #text-table-of-contents li {
+        display: inline-block;
+        width: 100%;
+    }
+    #text-table-of-contents {
+        display: inline-block;
+    }
+
+    /* TOC code ------------------------- */
+    /* remove border and background */
+
+    #table-of-contents code {
+        border: none;
+        background: none;
+        padding: none;
+        margin: none;
+        font-weight: normal;
+    }
+
+
+
+
+    /* ---------------------------- SECTION HEADERS ------------------------ */
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #555555;
+    }
+
+    /* Section number 1 */
+    .section-number-2 {
+        border: solid 1px #ccc;
+        padding: 2px 6px;
+        background: #336699;
+        color: white;
+        margin-right: 0.1em;
+        font-size: 120%;
+    }
+
+    h2 {
+        border-bottom: solid 1px #b0b0b0;
+        line-height: 180%;
+    }
+
+    .outline-2 {
+        margin: 3em 0 2em 0;
+    }
+
+
+
+
+    /* ----------------------------- TABLES -------------------------------- */
+
+    table {
+        border-collapse: collapse;
+        margin: 1.2em;
+    }
+
+    th, td {
+        vertical-align: top;
+        padding: 1px 6px;
+    }
+
+    td {
+        border: solid 1px #ccc;
+    }
+
+    th {
+        border: solid 1px #555555;
+        background: #555555;
+        color: white;
+        font-size: 110%;
+    }
+
+    th.org-left, td.org-left {
+        text-align: left;
+    }
+
+    th.org-center, td.org-center {
+        text-align: center;
+    }
+
+    th.org-right, td.org-right {
+        text-align: right;
+    }
+
+
+
+
+
+    /* ---------------------- SOURCE CODE BLOCKS --------------------------- */
+
+    pre.src {
+        font-family: 'Consolas', monospace;
+        font-size: 12px;
+        line-height: 100%;
+	background: #f8f8ff;
+    }
+
+    /* Colors */
+    pre span.org-comment-delimiter	{color: #aaaaaa; font-style: italic}
+    pre span.org-comment		{color: #aaaaaa; font-style: italic;}
+    pre span.org-keyword		{font-weight: bold;}
+    pre span.org-builtin		{font-weight: bold;}
+    pre span.org-string			{color: green;}
+    pre span.org-variable-name		{color: #0099ff;}
+    pre span.org-function-name		{font-weight:bold;}
+    pre span.org-type			{}
+    pre span.org-preprocessor		{}
+    pre span.org-constant		{color: #9933ff;}
+    pre span.org-doc			{color: #888888;}
+    pre span.org-sh-quoted-exec		{}
+    pre span.linenr                     {color: #ff0066; font-weight: bold;}
+
+
+    /* Inline Code ------------------------- */
+
+    code {
+        font-family: 'Consolas', monospace;
+        color: #0099ff;
+        padding: 1px 5px 2px;
+        border: solid 1px #999999;
+        border-radius: 3px;
+        background: #f8f8ff;
+    }
+
+
+    /* Inline code in headers -------------- */
+
+    h1 code, h2 code, h3 code,
+    h4 code, h5 code, h5 code {
+        border: none;
+        background: none;
+    }
+
+
+
+
+
+
+    /* ---------------------------- POSTAMBLE ------------------------------ */
+
+    #postamble {
+        text-align: center;
+        font-size: 0.9em;
+        background: #336699;
+        color: white;
+        padding: 5px;
+        margin-top: 50px;
+	line-height: 110%;
+	letter-spacing: 0.5px;
+    }
+
+    /* Postamble links --------------------- */
+    #postamble a {
+        color: #ccffff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* Postamble <hr>: hide it! ------------ */
+    #postamble hr {
+        border: none;
+    }
+}
+
+
+
+/*****************************************************************************/
+/* ----------------------------- PRINT MEDIA ------------------------------- */
+/*****************************************************************************/
+@media print {
+    html {
+        font-family: 'Cambria', sans-serif;
+        font-size: 11px;
+        font-color: #cccccc;
+    }
+
+    body {
+	margin: 1cm;
+    }
+
+    div#content {
+	margin: 0;
+	width: 100%;
+    }
+
+    /* TITLE */
+    .title {
+	padding: 10px;
+	font-size: 1.5em;
+    }
+
+    /* headings: h1, h2, ... */
+    /* all */
+    h1, h2, h3, h4, h5, h6 {
+        font-color: black;
+        font-weigth: bold;
+    }
+    h1 { font-size: 160%; }
+    h2 { font-size: 150%; }
+    h3 { font-size: 140%; }
+    h4 { font-size: 130%; }
+    h5 { font-size: 120%; }
+    h6 { font-size: 110%; }
+
+    h2 {
+	border: none;
+    }
+
+
+    /* SOURCE CODE BLOCKS */
+    pre {
+        font-family: 'Consolas', monospace;
+        font-size: 10px;
+    }
+
+    pre.src {
+	background: #f8f8ff;
+    }
+
+    /* POSTABMLE */
+    #postamble {
+	border-top: solid 1px #ccc;
+    }
+}
